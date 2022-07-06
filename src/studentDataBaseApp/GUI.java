@@ -45,7 +45,7 @@ public class GUI implements ActionListener {
 	panel.add(inputText);
 	
 	//Button For Conformation 
-	conformButton = new JButton("Conform");
+	conformButton = new JButton("Confirm");
 	conformButton.setBounds(20, 80, 85, 25);
 	conformButton.addActionListener(new GUI());
 	panel.add(conformButton);
