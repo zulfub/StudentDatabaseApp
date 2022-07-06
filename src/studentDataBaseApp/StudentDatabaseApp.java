@@ -6,7 +6,8 @@ public class StudentDatabaseApp {
 		
 		Student newStudent = new Student();
 		newStudent.enrollCourse();
-		newStudent.payTuition(500);
+		newStudent.payTuition();
+		System.out.println(newStudent.toString());
 		//Ask How many student will added to course
 		
 		//Create N number of student

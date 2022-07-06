@@ -45,7 +45,7 @@ public class Student {
 	//Enroll Courses
 	public void enrollCourse() {
 		do {
-		System.out.print("Enter Q for Quit ");
+		System.out.print("Enter Quit for Quit ");
 		Scanner scan = new Scanner(System.in);
 		String course = scan.nextLine();
 		if(!course.equalsIgnoreCase("quit" )) {
@@ -61,10 +61,8 @@ public class Student {
 		else break;
 		
 
-		System.out.println("Tuition Fee of total is ::: " + tutionBalance);
 		}while(true);
 
-		System.out.println("Enrolled In ::" + courses);
 		System.out.println("Tuition Fee of total is ::: " + tutionBalance);
 	}
 	//View balance
@@ -73,11 +71,23 @@ public class Student {
 		
 	}
 	//PAy Tuition
-	public void payTuition(int payment) {
+	public void payTuition() {
+		viewBalance();
+		System.out.print("Enter Your Payment :: ");
+		Scanner scan = new Scanner(System.in);
+		int payment = scan.nextInt();
 		tutionBalance = tutionBalance - payment;
 		System.out.println("Your payment Amt : " + payment + "\nCurrent Amt of Balance : " + tutionBalance);
 		viewBalance();
 	}
 	
 	//Show status
+	@Override
+	public String toString() {
+		return "Name : " + firstName + " " + lastName + 
+				"\nGrade Level : " + gradeYear +
+				"\nStudent ID : " + studentId +
+				"\nCourses Enrolled : " + courses +
+				"\nBalance : $" + tutionBalance;
+	}
 }
